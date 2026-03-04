@@ -1,18 +1,15 @@
-const revealItems = document.querySelectorAll('.reveal-on-scroll');
+AOS.init({
+  duration: 700,
+  easing: 'ease-out-cubic',
+  once: true,
+  offset: 60,
+});
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px',
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    header.style.boxShadow = '0 8px 24px rgba(2,6,23,0.08)';
+  } else {
+    header.style.boxShadow = 'none';
   }
-);
-
-revealItems.forEach((item) => observer.observe(item));
+});
