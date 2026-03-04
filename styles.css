@@ -39,6 +39,16 @@ body {
 .nav-wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem 0; }
 .brand { text-decoration: none; color: var(--dark); font-weight: 900; }
 .brand span { color: var(--primary); }
+.logo-ask {
+  color: #111;
+  font-weight: 700;
+  font-size: 28px;
+}
+.logo-review {
+  color: #ff2a2a;
+  font-weight: 700;
+  font-size: 28px;
+}
 nav { display: flex; align-items: center; gap: 1rem; }
 nav a { text-decoration: none; color: var(--dark); font-weight: 500; }
 
