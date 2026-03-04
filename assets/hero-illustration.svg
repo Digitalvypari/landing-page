@@ -1,0 +1,27 @@
+<svg viewBox="0 0 560 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Customer scanning QR and recording testimonial">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff2a2a" />
+      <stop offset="100%" stop-color="#ff7d7d" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="560" height="430" rx="22" fill="#f8fafc"/>
+  <rect x="40" y="80" width="170" height="230" rx="16" fill="#0f172a"/>
+  <rect x="56" y="104" width="138" height="180" rx="12" fill="#fff"/>
+  <rect x="90" y="132" width="70" height="70" fill="#111"/>
+  <rect x="99" y="141" width="13" height="13" fill="#fff"/>
+  <rect x="138" y="141" width="13" height="13" fill="#fff"/>
+  <rect x="119" y="161" width="13" height="13" fill="#fff"/>
+  <text x="72" y="225" fill="#334155" font-size="13" font-family="Inter">Scan Smart QR</text>
+
+  <rect x="320" y="45" width="200" height="340" rx="28" fill="#111827"/>
+  <rect x="336" y="78" width="168" height="245" rx="16" fill="#fff"/>
+  <circle cx="420" cy="132" r="42" fill="url(#g1)"/>
+  <polygon points="412,115 412,149 440,132" fill="#fff"/>
+  <rect x="356" y="205" width="128" height="12" rx="6" fill="#e2e8f0"/>
+  <rect x="356" y="227" width="98" height="12" rx="6" fill="#e2e8f0"/>
+  <circle cx="420" cy="290" r="18" fill="#ff2a2a"/>
+
+  <path d="M213 165 C260 145, 278 138, 318 118" stroke="#ff2a2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <polygon points="307,110 325,114 314,126" fill="#ff2a2a"/>
+</svg>
