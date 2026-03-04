@@ -39,6 +39,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   padding: 0.85rem 0;
 }
 
@@ -47,6 +48,7 @@ body {
   font-weight: 800;
   color: var(--text);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand span {
@@ -63,12 +65,21 @@ nav a {
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
 }
 
 .hero {
   padding: 4.5rem 0 3rem;
   background: radial-gradient(circle at top right, #ffe6e6, transparent 55%),
     linear-gradient(135deg, #ffffff 0%, #f9fafc 70%);
+}
+
+.page-hero {
+  padding: 4rem 0 2.4rem;
 }
 
 .hero-grid {
@@ -123,10 +134,12 @@ h1 span {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(214, 0, 0, 0.18);
 }
 
 .btn-outline {
@@ -209,7 +222,8 @@ h1 span {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
 }
 
-.service-grid {
+.service-grid,
+.flow-grid {
   margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -219,6 +233,17 @@ h1 span {
 .service-card {
   padding: 1.3rem;
   border-top: 5px solid var(--secondary);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover,
+.hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.1);
+}
+
+.flow-highlight {
+  padding-top: 0;
 }
 
 .contact {
@@ -234,6 +259,16 @@ h1 span {
 
 .contact-form {
   padding: 1.2rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.pricing-card.popular {
+  border: 1px solid #ffd3d3;
 }
 
 label {
@@ -266,13 +301,48 @@ textarea {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
 }
 
+.reveal-up {
+  animation: revealUp 0.7s ease both;
+}
+
+.delay-1 {
+  animation-delay: 0.12s;
+}
+
+.delay-2 {
+  animation-delay: 0.24s;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    gap: 0.65rem;
+  }
+
+  nav a {
+    font-size: 0.92rem;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-grid,
-  .contact-wrap {
+  .contact-wrap,
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-grid {
+  .service-grid,
+  .flow-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -286,7 +356,8 @@ textarea {
     padding-top: 3rem;
   }
 
-  .service-grid {
+  .service-grid,
+  .flow-grid {
     grid-template-columns: 1fr;
   }
 
